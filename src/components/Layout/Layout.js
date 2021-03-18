@@ -1,12 +1,14 @@
 import React from 'react'
-import Logo from './Logo/Logo';
 import Toolbar from './Toolbar/Toolbar'
 
-function Header() {
+function Header({ children }) {
   return (
-    <div>
+    <>
       <Toolbar />
-    </div>
+      <main className="main-wrapper"></main>
+      {children}
+
+    </>
   )
 }
 

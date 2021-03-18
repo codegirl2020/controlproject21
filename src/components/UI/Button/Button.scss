@@ -1,0 +1,16 @@
+.btn-transparent{
+  font-family: Gilroy-Light;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #ccc;
+  background: transparent;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover{
+  background: #E4714A;
+  transition: 0.1s;
+}
+

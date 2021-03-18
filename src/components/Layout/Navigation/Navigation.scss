@@ -1,0 +1,22 @@
+.toolbar-nav {
+  display: flex;
+}
+.toolbar-nav__link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  font-weight: bold;
+  color: #101010;
+  text-decoration: none;
+  font-family: Gilroy-Light;
+}
+.toolbar-nav__link.active {
+  background: #e2e2e2;
+  color: #E4714A;
+}
+.toolbar-nav__link span {
+  margin-left: .5rem;
+}
+.toolbar-nav__link svg {
+  font-size: 1.5rem;
+}
