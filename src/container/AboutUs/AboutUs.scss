@@ -2,7 +2,7 @@
   margin-top: -2rem;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 
 }
@@ -12,11 +12,14 @@
 }
 
 .about-title{
+  margin-left: 70%; 
+  margin-top: -1rem;
   font-size: 30px;
   font-family: Gilroy-Extrabold;
   text-align: center;
 }
 .about-text{
+  margin-right: 2rem;
   font-family: Gilroy-Light;
   width: 500px;
 }

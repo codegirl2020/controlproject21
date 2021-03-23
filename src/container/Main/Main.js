@@ -6,9 +6,9 @@ import './Main.scss';
 function Main({ clicked }) {
   return (
     <div className="hero">
-      <h1 className="hero__title">Fitness Club in Bishkek</h1>
-      <p className="hero__text">Fitness for everybody</p>
-      <Button modif="btn-transparent" onClick={clicked}>Read Packages</Button>
+      <h1 className="hero__title">Фитнесс-клуб в Бишкеке</h1>
+      <p className="hero__text">Фитнесс который доступен каждому</p>
+      <Button modif="btn-transparent" onClick={clicked}>Посмотреть абонементы</Button>
     </div>
   )
 }

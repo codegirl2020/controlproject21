@@ -1,0 +1,23 @@
+.aboutfooter{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutfooter-main_title{
+  font-family: Gilroy-Extrabold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.aboutfooter-item{
+  list-style: none;
+  margin-left: 3rem;
+}
+
+.aboutfooter-icon{
+  font-size: 30px;
+  fill: #e47049;;
+}
+.aboutfooter-text{
+  width: 250px;
+}
