@@ -14,3 +14,39 @@
   transition: 0.1s;
 }
 
+.btn-white{
+  margin: 2rem 4rem;
+  color: #282926;
+  padding: 10px 15px;
+  font-family: Gilroy-Light;
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+  background: #fff;
+  border: 1px solid #fff;
+  box-shadow: 0 2px 3px -1px rgba(0,0,0, .5);
+}
+.btn-yellow{
+  margin: 2rem 4rem;
+  color: #282926;
+  font-family: Gilroy-Light;
+  font-weight: bold;
+  padding: 10px 15px;
+  font-size: 15px;
+  text-decoration: none;
+  background: #efbc41;
+  border: 1px solid #efbc41;
+  border-radius: 5px;
+}
+.btn-gray{
+  margin: 2rem 4rem;
+  color: #282926;
+  padding: 10px 15px;
+  font-family: Gilroy-Light;
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+  background: #000000;
+  border: 1px solid #fff;
+  box-shadow: 0 2px 3px -1px rgba(0,0,0, .5);
+}
