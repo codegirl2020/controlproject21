@@ -1,8 +1,7 @@
-import { Link } from 'react-router-dom';
 import './Button.scss';
 
 const Button = ({ children, modif, clicked, type }) => {
-  return <Link className={`btn ${modif ? modif : ''}`}>{children}</Link>
+  return <button className={`btn ${modif ? modif : ''}`} onClick={clicked}>{children}</button>
 }
 
 export default Button;

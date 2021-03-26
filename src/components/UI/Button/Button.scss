@@ -1,12 +1,23 @@
-.btn-transparent{
+.btn {
   font-family: Gilroy-Light;
-  text-decoration: none;
-  color: #fff;
-  border: 1px solid #ccc;
-  background: transparent;
-  padding: 1rem 2rem;
-  border-radius: 10px;
+  display: inline-block;
+  margin: 0 .5rem;
   cursor: pointer;
+  border: none;
+  background: #ccc;
+  padding: .5rem 1.5rem;
+  color: #000;
+  border-radius: 4px;
+  opacity: .8;
+  transition: .2s;
+  text-decoration: none;
+}
+
+.btn:hover{
+  opacity: 1; 
+}
+.btn-transparent{
+  background: transparent;
 }
 
 .btn-transparent:hover{
@@ -15,38 +26,35 @@
 }
 
 .btn-white{
-  margin: 2rem 4rem;
-  color: #282926;
-  padding: 10px 15px;
-  font-family: Gilroy-Light;
-  font-weight: bold;
-  font-size: 15px;
+  margin-left: -1rem;
+  color: #333431;
+  font-family: Gilroy-ExtraBold;
   text-decoration: none;
   background: #fff;
   border: 1px solid #fff;
   box-shadow: 0 2px 3px -1px rgba(0,0,0, .5);
 }
 .btn-yellow{
-  margin: 2rem 4rem;
-  color: #282926;
-  font-family: Gilroy-Light;
-  font-weight: bold;
-  padding: 10px 15px;
-  font-size: 15px;
-  text-decoration: none;
+  font-family: Gilroy-ExtraBold;
+  color: #333431;
   background: #efbc41;
-  border: 1px solid #efbc41;
-  border-radius: 5px;
+  box-shadow: 0 2px 3px -1px rgba(0,0,0, .5);
+  
 }
 .btn-gray{
-  margin: 2rem 4rem;
-  color: #282926;
-  padding: 10px 15px;
-  font-family: Gilroy-Light;
-  font-weight: bold;
-  font-size: 15px;
-  text-decoration: none;
-  background: #000000;
-  border: 1px solid #fff;
+  font-family: Gilroy-ExtraBold;
+  background: #333431;
+  color: #fff;
+  border: 1px solid #333431;
   box-shadow: 0 2px 3px -1px rgba(0,0,0, .5);
+}
+.btn-danger{
+  font-family: Gilroy-ExtraBold;
+  background: #e47049;
+  color: white;
+}
+
+.btn-success{
+  background: #34ad3c;
+  color: white;
 }

@@ -1,12 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './News.scss';
+
 
 function News() {
   return (
-    <div className="news">
-      <h1 className="news-title">Новости о клубе</h1>
+    <div className="news-link">
+      <Link to="/add" className=" link btn-danger" >Add</Link>
 
     </div>
+
   )
 }
 

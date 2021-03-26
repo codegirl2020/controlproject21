@@ -1,0 +1,17 @@
+.news-link{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 2rem 1.5rem;
+}
+
+.link{
+  margin-left: 1rem;
+  font-family: Gilroy-Light;
+  font-weight: bold;
+  font-size: 15px;
+  padding: .5rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}

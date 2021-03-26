@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import Button from '../../components/UI/Button/Button';
+
 import './Packages.scss';
 import PackageItem from './PackagesItem';
 
@@ -12,17 +11,32 @@ function Packages() {
         <ul className="packages__list">
           <PackageItem
             title='CASUAL'
+            titletype='title-dark'
+            button='ПРИОБРЕСТИ CASUAL'
+            btntype="btn-white"
+            bgtype="bg-white"
+            icontype="icon-gray"
+            desctype="desc-dark"
             descs={['Доступ в тренажерный зал',
               'Посещение групповых занятий по расписанию',
               'Сейф для ценных вещей', 'Доступ к закрытым душевым кабинам',
               'Ежедневная аренда шкафчиков']}
+            pricetype="price-dark"
             price='1000 Р/мес.' />
-          <Button modif="btn-white">Приобрести CASUAL</Button>
+
         </ul>
         <ul className="packages__list">
           <PackageItem
+            className="package-orange"
             title='VIP'
+            titletype='title-yellow'
+            bgtype="bg-dark"
+            icontype="icon-yellow"
             subtitle='Оптимальный выбор'
+            subtitletype='subtitle-yellow'
+            button='ПРИОБРЕСТИ  VIP'
+            btntype='btn-yellow'
+            desctype="desc-light"
             descs={['Доступ в тренажерный зал',
               'Бесплатные тренировки с тренером',
               'Посещение групповых занятий по расписанию',
@@ -34,12 +48,18 @@ function Packages() {
               'Гостевые визиты',
               'Массаж'
             ]}
+            pricetype="price-light"
             price='1800 Р/мес.' />
-          <Button modif="btn-yellow">Приобрести VIP</Button>
         </ul>
         <ul className="packages__list">
           <PackageItem
             title='PRO'
+            titletype='title-white'
+            bgtype="bg-yellow"
+            icontype="icon-gray"
+            button='ПРИОБРЕСТИ  PRO'
+            btntype="btn-gray"
+            desctype="desc-light"
             descs={['Доступ в тренажерный зал',
               'Посещение групповых занятий по расписанию',
               'Сейф для ценных вещей',
@@ -48,8 +68,9 @@ function Packages() {
               'Составление правильного рациона питания',
               'Бесплатные тренировки с тренером',
               'Гостевые визиты']}
+            pricetype="price-light"
             price='1400 Р/мес.' />
-          <Button modif="btn-gray">Приобрести PRO</Button>
+
 
         </ul>
       </div>

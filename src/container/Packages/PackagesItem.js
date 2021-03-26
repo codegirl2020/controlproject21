@@ -1,17 +1,20 @@
 import React from 'react'
+import Button from '../../components/UI/Button/Button';
 import './Packages.scss';
+import { FaCheck } from 'react-icons/fa';
 
-function PackagesItem({ title, descs, subtitle, price }) {
+function PackagesItem({ title, descs, subtitle, price, button, btntype, subtitletype, titletype, bgtype, icontype, desctype, pricetype }) {
 
   return (
-    <ul className="packages-item">
-      <h1 className="packages-item__title">{title}</h1>
-      <h3> {subtitle}</h3>
-      <ul className="packages-item">
+    <ul className={bgtype}>
+      <h1 className={titletype}>{title}</h1>
+      <h3 className="packages-item__subtitle" className={subtitletype}> {subtitle}</h3>
+      <ul>
         {descs.map(desc => {
-          return <li>{desc}</li>
+          return <li className={desctype}><FaCheck className={icontype} />{desc}</li>
         })}
-        <h4>{price}</h4>
+        <h4 className={pricetype}>{price}</h4>
+        <Button modif={btntype}>{button}</Button>
       </ul>
     </ul>
   )
