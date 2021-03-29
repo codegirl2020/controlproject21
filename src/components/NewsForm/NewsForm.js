@@ -43,7 +43,7 @@ function NewsForm({ history }) {
   const onFileUpload = event => {
     event.preventDefault();
     const fileName = file.name;
-    const storageRef = firebase.storage().ref('/images' + filename);
+    const storageRef = firebase.storage().ref('/images' + 'filename');
     const uploadTask = storageRef.pull(file);
     uploadTask.on('state_changed', (snapshot) => {
       const progress = snapshot.bytesTransferred / snapshot.totalBytes * 100;
