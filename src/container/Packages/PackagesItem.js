@@ -2,6 +2,7 @@ import React from 'react'
 import Button from '../../components/UI/Button/Button';
 import './Packages.scss';
 import { FaCheck } from 'react-icons/fa';
+import './Packages.scss';
 
 function PackagesItem({ title, descs, subtitle, price, button, btntype, subtitletype, titletype, bgtype, icontype, desctype, pricetype }) {
 
@@ -20,4 +21,4 @@ function PackagesItem({ title, descs, subtitle, price, button, btntype, subtitle
   )
 }
 
-export default PackagesItem
+export default PackagesItem;

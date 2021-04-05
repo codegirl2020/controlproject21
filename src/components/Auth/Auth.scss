@@ -10,6 +10,8 @@
 .news-data__title {
   text-align: center;
   text-transform: uppercase;
+  font-family: Gilroy-Light;
+  font-size: 20px;
 }
 .news-data__group {
   margin-bottom: .5rem;
@@ -27,4 +29,9 @@
   box-sizing: border-box;
   border-radius: 5px;
   border: 1px solid #ccc;
+}
+.errors{
+  font-size: 15px;
+  color: tomato;
+  font-family: Gilroy-Extrabold;
 }

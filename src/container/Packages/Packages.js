@@ -2,6 +2,9 @@
 import './Packages.scss';
 import PackageItem from './PackagesItem';
 
+
+
+
 function Packages() {
 
   return (
@@ -10,6 +13,8 @@ function Packages() {
       <div className="packages">
         <ul className="packages__list">
           <PackageItem
+            key="card1"
+            className="package__item"
             title='CASUAL'
             titletype='title-dark'
             button='ПРИОБРЕСТИ CASUAL'
@@ -27,7 +32,8 @@ function Packages() {
         </ul>
         <ul className="packages__list">
           <PackageItem
-            className="package-orange"
+            key="card2"
+            className="package__item package-orange"
             title='VIP'
             titletype='title-yellow'
             bgtype="bg-dark"
@@ -35,7 +41,7 @@ function Packages() {
             subtitle='Оптимальный выбор'
             subtitletype='subtitle-yellow'
             button='ПРИОБРЕСТИ  VIP'
-            btntype='btn-yellow'
+            btntype="btn-yellow"
             desctype="desc-light"
             descs={['Доступ в тренажерный зал',
               'Бесплатные тренировки с тренером',
@@ -53,6 +59,8 @@ function Packages() {
         </ul>
         <ul className="packages__list">
           <PackageItem
+            key="card3"
+            className="package__item"
             title='PRO'
             titletype='title-white'
             bgtype="bg-yellow"
@@ -70,8 +78,6 @@ function Packages() {
               'Гостевые визиты']}
             pricetype="price-light"
             price='1400 Р/мес.' />
-
-
         </ul>
       </div>
     </>

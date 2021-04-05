@@ -1,14 +1,18 @@
+
 .packages{
-  background: #262724;
+background: #262724;
 display: flex;
 justify-content: center;
 align-items: center;
 }
 .packages-title{
+  padding-top: 10px;
+  margin-bottom: -10px;
+  background: #262724;
+  color: #fff;
   text-align: center;
   font-family: Gilroy-ExtraBold;
 }
-
 .icon-gray{
   margin-right: 0.5rem;
   color: #333431;
@@ -17,6 +21,7 @@ align-items: center;
   margin-right: 1rem;
   color: #efbc41;
 }
+
 .packages-item__subtitle{
   text-align: center;
   font-family: Gilroy-ExtraBold;
@@ -64,6 +69,7 @@ align-items: center;
   color:#333431;
 }
 .bg-dark{
+  margin-top: 2rem;
   padding: 2rem;
   background: #333431;
   box-shadow: 0 2px 3px -1px rgba(0,0,0, .5);

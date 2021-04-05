@@ -1,0 +1,39 @@
+.contacts-wrapper{
+  margin-top: -50px;
+  background: #333431;
+  height: 100vh;
+}
+.contacts-title{
+  padding-top: 2rem;
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+  font-family: Gilroy-Extrabold;
+}
+.contacts-subtitle{
+  color: white;
+  font-family: Gilroy-Light;
+}
+.contacts-form{
+  margin-top: 7rem; 
+}
+
+.contacts-icon{
+  fill: #333431;
+}
+
+.contact-input{
+  padding: 10px !important;
+  background-color:#333431 !important;
+  border-radius: 3px;
+  border: 1px solid #efbc41 !important;
+  font-family: Gilroy-Extrabold;
+  color: #fff;
+  font-size: 15px !important;
+}
+
+.contact-label{
+  color: #fff;
+  font-family: Gilroy-Light;
+  font-size: 20px;
+}

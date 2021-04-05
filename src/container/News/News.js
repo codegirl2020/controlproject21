@@ -21,20 +21,33 @@ function News() {
     })
   }, [])
 
+  let news = (
+    <div>
+      <h1> We will come back with news</h1>
+    </div>
+  )
+  if (posts.length !== 0) {
+    news = (
+      <>
+        <h2 className="new-list__title">Our News</h2>
+        <ul className="news-list">
 
+          {posts.map(post => {
+            return <NewsItem key={post.id} {...post} />
+          })}
+        </ul>
+      </>
+    )
+  }
 
   return (
     <div className="news-link">
-      <Link to="/add" className="link btn-danger">Add</Link>
-      <ul className="news-list">
-        {posts.map(post => {
-          return <NewsItem key={post.id} {...post} />
-        })}
-      </ul>
-
+      <Link to="/add" className="link btn-transparent">Add</Link>
+      {news}
     </div>
 
   )
+
 }
 
 export default News

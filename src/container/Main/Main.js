@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import Button from '../../components/UI/Button/Button';
 import './Main.scss';
 
@@ -8,7 +9,7 @@ function Main({ clicked }) {
     <div className="hero">
       <h1 className="hero__title">Фитнесс-клуб в Бишкеке</h1>
       <p className="hero__text">Фитнесс который доступен каждому</p>
-      <Button modif="btn-transparent" onClick={clicked}>Посмотреть абонементы</Button>
+      <Link className="btn btn-transparent" to="/packages">Посмотреть абонементы</Link>
     </div>
   )
 }

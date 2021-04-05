@@ -5,11 +5,31 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk'
+import newsReducer from './store/reducers/news-reducer';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import authReducer from './store/reducers/auth-reducer';
+
+const rootReducer = combineReducers({
+  news: newsReducer,
+  auth: authReducer
+})
+
+const store = createStore(rootReducer,
+  composeWithDevTools(
+    applyMiddleware(thunk)
+  )
+);
+
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

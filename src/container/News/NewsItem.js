@@ -1,8 +1,8 @@
-
+import Button from '../../components/UI/Button/Button';
 import './News.scss';
 
 function NewsItem(props) {
-  const { title, date, text, img, address } = props;
+  const { title, date, text, img, address, btn } = props;
   return (
     <li className="news__item">
       <div className="news__img">
@@ -14,6 +14,7 @@ function NewsItem(props) {
       </div>
       <p className="news__address">{address}</p>
       <p className="news__text">{text}</p>
+      <Button modif="btn-orange"> Read more </Button>
     </li>
   )
 }

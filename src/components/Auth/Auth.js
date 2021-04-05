@@ -1,31 +1,26 @@
+
 import React from 'react';
-import './NewsForm.scss';
+import './Auth.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from '../../components/UI/Button/Button';
 import { useState, useEffect } from 'react';
-import firebase, { auth } from '../../config/fbConfig';
-import FormAdd from './FormAdd/FormAdd';
+import { auth } from '../../config/fbConfig';
+import { useDispatch } from 'react-redux';
+import { sendAuth } from '../../store/actions/auth-actions';
+import FormAdd from '../FormAdd/FormAdd';
 
-function NewsForm({ history }) {
+
+
+
+function Auth({ history }) {
   const [user, setUser] = useState(null)
   const [userData, setUserData] = useState({
     email: '',
     password: ''
   });
+  const [errors, seterrors] = useState('');
 
-
-
-
-
-  // function newsHandler(e) {
-  //   e.preventDefault();
-  //   const newblog = {
-  //     ...news
-  //   }
-  //   axios.post('/news.json', newblog).finally(() => {
-  //     history.push('/')
-  //   })
-  // }
+  const dispatch = useDispatch();
 
   function changeHandler({ target: { name, value } }) {
     setUserData(data => {
@@ -36,33 +31,43 @@ function NewsForm({ history }) {
     })
   };
 
-
-
-  const authHandler = event => {
-    event.preventDefault();
-    firebase.auth()
-      .signInWithEmailAndPassword(userData.email, userData.password)
-      .then(result => {
-        setUser(result.user);
-      })
-      .catch(err => console.log(err))
-  };
-  useEffect(() => {
-    auth.onAuthStateChanged(user => {
-      if (user) {
-        setUser(user);
-      }
-    })
-  }, [])
-
   const onLogOut = () => {
     auth.signOut()
       .then(() => {
         console.log('call');
         setUser(null);
+
       })
   };
 
+
+  const authHandler = event => {
+    event.preventDefault();
+    dispatch(sendAuth(userData))
+
+    // firebase.auth()
+    //   .signInWithEmailAndPassword(userData.email, userData.password)
+    //   .then(result => {
+
+    //     setUser(result.user);
+    //   })
+    //   .catch(err => {
+    //     if (err.code === 'auth/wrong-password') {
+    //       seterrors('Wrong Password');
+    //     }
+    //   })
+  };
+  useEffect(() => {
+    auth.onAuthStateChanged(user => {
+
+      // if (user) {
+      //   setUser(user);
+      // }
+
+    })
+  }, [])
+
+  // 
 
   let form = (
     <form onSubmit={authHandler}>
@@ -92,12 +97,15 @@ function NewsForm({ history }) {
       <FormAdd history={history} onLogOut={onLogOut} />
     )
   }
+
   return (
     <div className="news-data">
-      <h1 className="news-data__title">Enter news</h1>
+      <h1 className="news-data__title">Enter Credentials</h1>
+      {errors && <p className="errors">{errors}</p>}
       {form}
     </div>
   )
 }
 
-export default NewsForm
+export default Auth
+
