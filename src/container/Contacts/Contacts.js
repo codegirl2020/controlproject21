@@ -2,6 +2,7 @@ import React from 'react'
 import { FaArrowRight } from 'react-icons/fa';
 import './Contacts.scss';
 import Button from "../../components/UI/Button/Button";
+import { Ymaps, Map, YMaps } from 'react-yandex-maps';
 
 
 
@@ -32,6 +33,7 @@ function Contacts({ modif }) {
           <Button modif=" btn btn-yellow">Оставить заявку <FaArrowRight className="contacts-icon" /></Button>
         </form>
       </div >
+      <div className="contact-map"><YMaps><Map defaultState={{ center: [42.87, 74.62], zoom: 9 }} className='contact-map__card' ></Map></YMaps></div>
     </div>
   )
 }

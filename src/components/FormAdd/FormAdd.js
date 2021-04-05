@@ -3,10 +3,11 @@ import { useState } from 'react';
 import firebase from '../../config/fbConfig';
 import axios from '../../api/axios-firebase';
 import { useDispatch } from 'react-redux';
-import { logOut } from '../../store/actions/auth-actions';
-// import { auth } from '../../config/fbConfig';
+import { onLogOut } from '../../store/actions/auth-actions'
 
-function FormAdd({ history, onLogOut }) {
+
+
+function FormAdd({ history }) {
   const [news, setNews] = useState({
     title: '',
     date: '',
@@ -14,7 +15,7 @@ function FormAdd({ history, onLogOut }) {
     text: ''
   });
 
-  useDispatch(logOut)
+  const dispatch = useDispatch();
 
   const [file, setFile] = useState(null);
   const [progress, setProgress] = useState(0);
@@ -62,9 +63,9 @@ function FormAdd({ history, onLogOut }) {
   return (
     <div className="container">
       <div className='row mt-5'>
-        <div className="col-6">There is such User</div>
+        <div className="col-6">Пользователь авторизован</div>
         <div className="col-6">
-          <Button modif="btn-green" clicked={onLogOut}>Exit</Button>
+          <Button modif="btn-green" clicked={() => dispatch(onLogOut())}>Выход</Button>
         </div>
         <div className="col-12">
           <form onSubmit={onFileUpload}>
@@ -109,7 +110,7 @@ function FormAdd({ history, onLogOut }) {
             </div>
             <div className="container">
               <Button
-                modif="btn-orange">Upload</Button>
+                modif="btn-orange">Загружать</Button>
             </div>
           </form>
         </div>

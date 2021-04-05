@@ -2,6 +2,10 @@
   margin-top: -50px;
   background: #333431;
   height: 100vh;
+  position: relative;
+  // display: flex;
+  // justify-content: space-around;
+  // align-items: center;
 }
 .contacts-title{
   padding-top: 2rem;
@@ -14,15 +18,16 @@
   color: white;
   font-family: Gilroy-Light;
 }
-.contacts-form{
-  margin-top: 7rem; 
-}
 
+.contacts-form{
+  margin: 7rem 0;
+}
 .contacts-icon{
   fill: #333431;
 }
 
 .contact-input{
+  margin-bottom: 10px;
   padding: 10px !important;
   background-color:#333431 !important;
   border-radius: 3px;
@@ -36,4 +41,15 @@
   color: #fff;
   font-family: Gilroy-Light;
   font-size: 20px;
+}
+.contact-map{
+  position: absolute;
+  left: 50%;
+  top: 30%;
+}
+
+.contact-map__card{
+  margin-top: -10px;
+  width: 45vw;
+  height: 60vh;
 }

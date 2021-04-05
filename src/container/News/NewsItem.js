@@ -9,12 +9,12 @@ function NewsItem(props) {
         <img src={img} style={{ width: "250px" }} />
       </div>
       <div className="news__header">
-        <h3 className="news__title">Title <strong>{title}</strong></h3>
-        <p className="news__date">Date: <strong>{date}</strong></p>
+        <h3 className="news__title"><strong>{title}</strong></h3>
+        <p className="news__date"> <strong className="new-date__strong">{date}</strong></p>
       </div>
       <p className="news__address">{address}</p>
       <p className="news__text">{text}</p>
-      <Button modif="btn-orange"> Read more </Button>
+      <Button modif="btn-orange"> Подробнее </Button>
     </li>
   )
 }

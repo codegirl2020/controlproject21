@@ -17,13 +17,13 @@ export const logOut = () => {
   return { type: actionTypes.AUTH_LOGOUT };
 }
 
-export const sendAuth = (userData) => dispatch => {
+export const sendAuth = (userData, history) => dispatch => {
   dispatch(requestAuth())
   firebase.auth()
     .signInWithEmailAndPassword(userData.email, userData.password)
     .then(result => {
-
       dispatch(resultAuth(result.user))
+      history.push('/news')
     })
     .catch(err => {
       if (err.code === 'auth/wrong-password') {

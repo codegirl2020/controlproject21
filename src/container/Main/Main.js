@@ -9,7 +9,7 @@ function Main({ clicked }) {
     <div className="hero">
       <h1 className="hero__title">Фитнесс-клуб в Бишкеке</h1>
       <p className="hero__text">Фитнесс который доступен каждому</p>
-      <Link className="btn btn-transparent" to="/packages">Посмотреть абонементы</Link>
+      <Link className="btn btn-orange" to="/packages">Посмотреть абонементы</Link>
     </div>
   )
 }

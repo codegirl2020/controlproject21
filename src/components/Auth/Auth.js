@@ -43,7 +43,7 @@ function Auth({ history }) {
 
   const authHandler = event => {
     event.preventDefault();
-    dispatch(sendAuth(userData))
+    dispatch(sendAuth(userData, history))
 
     // firebase.auth()
     //   .signInWithEmailAndPassword(userData.email, userData.password)

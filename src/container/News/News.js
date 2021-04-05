@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import NewsItem from './NewsItem';
 import './News.scss';
 import axios from '../../api/axios-firebase';
+import { useSelector } from 'react-redux';
 
 
 function News() {
@@ -31,7 +32,6 @@ function News() {
       <>
         <h2 className="new-list__title">Our News</h2>
         <ul className="news-list">
-
           {posts.map(post => {
             return <NewsItem key={post.id} {...post} />
           })}
@@ -39,6 +39,10 @@ function News() {
       </>
     )
   }
+
+  const user = useSelector(({ auth }) => auth.user)
+
+  console.log(user);
 
   return (
     <div className="news-link">
