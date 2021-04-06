@@ -10,7 +10,7 @@ function News() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    axios.get('/news.json').then(response => { // {dsddsada: {}, rtregdgs: {}, dsadada: {}}
+    axios.get('/news.json').then(response => {
       if (!response.data) return;
       const posts = Object.keys(response.data).map(key => {
         return {
@@ -24,13 +24,13 @@ function News() {
 
   let news = (
     <div>
-      <h1> We will come back with news</h1>
+      <h1> Скоро будут новости</h1>
     </div>
   )
   if (posts.length !== 0) {
     news = (
       <>
-        <h2 className="new-list__title">Our News</h2>
+        <h2 className="new-list__title">Новости</h2>
         <ul className="news-list">
           {posts.map(post => {
             return <NewsItem key={post.id} {...post} />
@@ -46,7 +46,7 @@ function News() {
 
   return (
     <div className="news-link">
-      <Link to="/add" className="link btn-transparent">Add</Link>
+      {user !== null ? <Link to="/add" className="link btn-orange">Добавить</Link> : null}
       {news}
     </div>
 

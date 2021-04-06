@@ -2,7 +2,7 @@ import React from 'react'
 import { FaArrowRight } from 'react-icons/fa';
 import './Contacts.scss';
 import Button from "../../components/UI/Button/Button";
-import { Ymaps, Map, YMaps } from 'react-yandex-maps';
+import { Map, YMaps } from 'react-yandex-maps';
 
 
 

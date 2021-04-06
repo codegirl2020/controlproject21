@@ -1,14 +1,13 @@
 import React from 'react';
 import './Preloader.scss';
+import PuffLoader from 'react-spinners/PuffLoader'
 
-function Preloader() {
-  let newsItem = Array.from(Array(12), (_, i) => <div key={i} />)
+function Preloader({ isShow }) {
+  if (!isShow) {
+    return null;
+  }
   return (
-    <div className="news-loader-wrap">
-      <div className="pizza-loader">
-        {newsItem}
-      </div>
-    </div>
+    <PuffLoader size='10rem' />
   )
 }
 

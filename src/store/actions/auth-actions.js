@@ -38,5 +38,6 @@ export const onLogOut = () => dispatch => {
   firebase.auth().signOut()
     .then(() => {
       dispatch(logOut())
+
     })
 };

@@ -4,6 +4,8 @@ import firebase from '../../config/fbConfig';
 import axios from '../../api/axios-firebase';
 import { useDispatch } from 'react-redux';
 import { onLogOut } from '../../store/actions/auth-actions'
+import Preloader from '../UI/Preloader/Preloader';
+
 
 
 
@@ -19,6 +21,7 @@ function FormAdd({ history }) {
 
   const [file, setFile] = useState(null);
   const [progress, setProgress] = useState(0);
+  const [loading, setLoading] = useState(false)
 
   function changeHandler({ target: { name, value } }) {
     setNews(news => {
@@ -35,6 +38,8 @@ function FormAdd({ history }) {
 
 
   const onFileUpload = event => {
+    setLoading(true);
+
     event.preventDefault();
     const fileName = file.name;
     const storageRef = firebase.storage().ref('/images' + fileName);
@@ -47,6 +52,7 @@ function FormAdd({ history }) {
       },
       (error) => { console.log(error) },
       () => {
+        setLoading(false)
         uploadTask.snapshot.ref.getDownloadURL()
           .then(fileUrl => {
             const newblog = {
@@ -65,9 +71,12 @@ function FormAdd({ history }) {
       <div className='row mt-5'>
         <div className="col-6">Пользователь авторизован</div>
         <div className="col-6">
-          <Button modif="btn-green" clicked={() => dispatch(onLogOut())}>Выход</Button>
+          <Button modif="btn-green" clicked={() => {
+            history.push('/');
+            dispatch(onLogOut())
+          }}>Выход</Button>
         </div>
-        <div className="col-12">
+        {!loading ? <div className="col-12">
           <form onSubmit={onFileUpload}>
             <div className="input-group mt-3 mb-3 ">
               <input
@@ -113,7 +122,14 @@ function FormAdd({ history }) {
                 modif="btn-orange">Загружать</Button>
             </div>
           </form>
+        </div> : null}
+
+        <div className="col-12 d-flex justify-content-center">
+
+          <Preloader isShow={loading} />
+
         </div>
+
       </div>
     </div>
   )
